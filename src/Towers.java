@@ -28,9 +28,9 @@ public class Towers {
     int intermediatePole = 3-endPole-startPole;
     if (numDiscs == 0){
     }else{
-      moveDisc(startPole, endPole);
-      moveDisc(startPole, intermediatePole);
       solveTowers(numDiscs-1, startPole, intermediatePole);
+      moveDisc(startPole,endPole);
+      solveTowers(numDiscs-1, intermediatePole, endPole);
     }
   }
   /**
